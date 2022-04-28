@@ -8,16 +8,18 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: userservice
-mybatis:
-  type-aliases-package: cn.itcast.user.pojo
-  configuration:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: sh #n:
     map-underscore-to-camel-case: true
 logging:
   level:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka

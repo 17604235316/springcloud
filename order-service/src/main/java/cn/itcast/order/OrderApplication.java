@@ -24,8 +24,8 @@ public class OrderApplication {
         return new RestTemplate();
     }
 
-    @Bean
-    public IRule setRule(){
-        return new RandomRule();
-    }
+//    @Bean
+//    public IRule setRule(){
+//        return new RandomRule();
+//    }
 }
